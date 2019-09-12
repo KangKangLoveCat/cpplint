@@ -109,11 +109,8 @@ def main():
         if file_name == None or file_path != file_name:
             file_name = file_path
             sheet2.write(line_no, 0, file_name)
-            sheet2.write(line_no, 1, "line " + each_line.lstrip(file_name).strip(":"))
-            line_no = line_no + 1
-        else:
-            sheet2.write(line_no, 1, "line " + each_line.lstrip(file_name).strip(":"))
-            line_no = line_no + 1
+        sheet2.write(line_no, 1, "line " + each_line.lstrip(file_name).strip(":"))
+        line_no = line_no + 1
 
     book.save(sys.argv[2])
 
